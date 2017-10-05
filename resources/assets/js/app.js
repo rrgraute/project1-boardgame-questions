@@ -6,5 +6,4 @@
  */
 
 require('./bootstrap');
-
 $(document).foundation();

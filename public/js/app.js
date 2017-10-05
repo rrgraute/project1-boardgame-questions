@@ -761,7 +761,6 @@ module.exports = __webpack_require__(35);
  */
 
 __webpack_require__(9);
-
 $(document).foundation();
 
 /***/ }),

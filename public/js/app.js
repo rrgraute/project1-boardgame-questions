@@ -763,6 +763,24 @@ module.exports = __webpack_require__(35);
 __webpack_require__(9);
 $(document).foundation();
 
+$(document).ready(function () {
+
+    var questionTitle = $('.question');
+
+    $('.category-select').click(function () {
+
+        var categorySelect = $(this).data('categoryid');
+
+        console.log(categorySelect);
+
+        axios.get('/question/get/' + categorySelect, {}).then(function (response) {
+            console.log(response);
+        }).catch(function (error) {
+            console.log(error);
+        });
+    });
+});
+
 /***/ }),
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {

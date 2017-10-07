@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'QuestionController@index');
+Route::get('question/get/{questionCategoryId}', 'QuestionController@getQuestion');

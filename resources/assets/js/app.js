@@ -6,34 +6,75 @@
  */
 
 require('./bootstrap');
+
+var correctAnswer;
+
 $(document).foundation();
 
 $(document).ready( function() {
 
-    var questionTitle = $('.question');
-
-
+    hideQuestionElements();
 
 
     $('.category-select').click( function () {
-
-
+        hideQuestionElements();
         var categorySelect = $(this).data('categoryid');
-
-        console.log(categorySelect);
 
         axios.get('/question/get/' + categorySelect, {
         })
             .then(function (response) {
-                console.log(response);
+                console.log(response.data);
+                setQuestion(response.data);
             })
             .catch(function (error) {
                 console.log(error);
             });
+    });
 
-
-
+    $('.button.answer').click( function () {
+        var givenAnswer = $(this).data('answer');
+        if(givenAnswer == correctAnswer)
+        {
+            $('.conclusion').text('Je hebt de vraag goed beantwoord!');
+            $('.conclusion').fadeIn();
+            $('.punishment').hide();
+            $('.correct-answer').fadeIn();
+        } else {
+            $('.conclusion').text('Je hebt de vraag fout beantwoord!');
+            $('.conclusion').fadeIn();
+            $('.correct-answer').hide();
+            $('.punishment').fadeIn();
+        }
     });
 
 
 });
+
+function setQuestion(questionData)
+{
+    var question = questionData.question;
+    var answers = questionData.answers;
+    correctAnswer = questionData.correctAnswer;
+    var goodAnswerCondition = questionData.correctAnswerCondition;
+    var badAnswerCondition = questionData.badAnswerCondition;
+
+    $('.question').text(question);
+    $('.correct-answer').text(goodAnswerCondition);
+    $('.punishment').text(badAnswerCondition);
+
+    $('.button.answer').each(function(index) {
+        $(this).text(answers[index +1]);
+    });
+    $('.question').fadeIn();
+    $('.button-group').fadeIn();
+
+}
+
+function hideQuestionElements()
+{
+    $('.conclusion').hide();
+    $('.correct-answer').hide();
+    $('.punishment').hide();
+    $('.button-group').hide();
+    $('.question').hide();
+}

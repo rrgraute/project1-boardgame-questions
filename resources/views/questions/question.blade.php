@@ -11,12 +11,12 @@
                     </div>
                     <div class="card-section">
                         <div class="grid-x">
-                            <div class="cell large-auto hide">
+                            <div class="cell large-auto">
                                 <div class="expanded button-group">
-                                    <a class="button answer" data-answer="a"></a>
-                                    <a class="button answer" data-answer="b"></a>
-                                    <a class="button answer" data-answer="c"></a>
-                                    <a class="button answer" data-answer="d"></a>
+                                    <a class="button answer" data-answer="1"></a>
+                                    <a class="button answer" data-answer="2"></a>
+                                    <a class="button answer" data-answer="3"></a>
+                                    <a class="button answer" data-answer="4"></a>
                                 </div>
                             </div>
                         </div>
@@ -24,6 +24,7 @@
                             <div class="cell large-auto">
                                 <div class="results">
                                     <p class="conclusion"></p>
+                                    <p class="correct-answer"></p>
                                     <p class="punishment"></p>
                                 </div>
                                 <div class="cell large-auto question-categories">

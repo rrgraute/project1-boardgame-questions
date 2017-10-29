@@ -8445,3 +8445,9 @@ a.thumbnail image {
   }
 }
 
+body {
+  background: url("/img/background3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+

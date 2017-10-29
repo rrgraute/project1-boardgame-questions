@@ -3,8 +3,8 @@
 @section('content')
 
     <div class="grid-container">
-        <div class="grid-y grid-margin-y">
-            <div class="cell large-auto">
+        <div class="grid-y">
+            <div class="cell">
                 <div class="card">
                     <div class="card-divider">
                         <h3 class="question"></h3>
@@ -32,10 +32,17 @@
                                         <a class="button primary category-select" href="#" data-categoryId="{{ $category->id }}">{{ $category->name }}</a>
                                     @endforeach
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="grid-y">
+            <div class="cell">
+                <iframe src="https://wheeldecide.com/e.php?c1=1&c2=2&c3=3&c4=4&c5=5&c6=6&c7=1&c8=2&c9=3&c10=4&c11=5&time=5" width="500" height="500" scrolling="no" frameborder="0"></iframe>
+            </div>
+
         </div>
     </div>
 

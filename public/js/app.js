@@ -809,11 +809,19 @@ function setQuestion(questionData) {
     $('.correct-answer').text(goodAnswerCondition);
     $('.punishment').text(badAnswerCondition);
 
-    $('.button.answer').each(function (index) {
-        $(this).text(answers[index + 1]);
-    });
+    if (questionData.correctAnswer) {
+        $('.button.answer').each(function (index) {
+            $(this).text(answers[index + 1]);
+        });
+        $('.button-group').fadeIn();
+    } else {
+        $('.conclusion').text('Punten voor de vraag');
+        $('.conclusion').show();
+        $('.correct-answer').fadeIn();
+        $('.punishment').fadeIn();
+    }
+
     $('.question').fadeIn();
-    $('.button-group').fadeIn();
 }
 
 function hideQuestionElements() {

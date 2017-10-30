@@ -40,7 +40,7 @@
         </div>
         <div class="grid-y">
             <div class="cell">
-                <iframe src="https://wheeldecide.com/e.php?c1=1&c2=2&c3=3&c4=4&c5=5&c6=6&c7=1&c8=2&c9=3&c10=4&c11=5&time=5" width="500" height="500" scrolling="no" frameborder="0"></iframe>
+                <iframe src="https://wheeldecide.com/e.php?c1=10+punten+aftrek&c2=10+punten+aftrek&c3=Twee+beurten+overslaan&c4=Twee+beurten+overslaan&c5=5+punten+aftrek&c6=5+punten+aftrek&c7=Een+beurt+overslaan&c8=Een+beurt+overslaan&c9=Nog+een+keer+draaien&c10=Nog+een+keer+draaien&c11=Beginnen+met+0+punten&time=5" width="500" height="500" scrolling="no" frameborder="0"></iframe>
             </div>
 
         </div>

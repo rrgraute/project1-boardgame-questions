@@ -21,7 +21,7 @@ class QuestionsSeeder extends Seeder
 
 
         \App\Question::create([
-            'question_id' => $easyCategory->id,
+            'question_group_id' => $easyCategory->id,
             'question' => "Van wanneer tot wanneer was de 2e wereldoorlog?",
             'answer_1' => "1940 - 1945",
             'answer_2' => '1945 - 1950',
@@ -33,7 +33,7 @@ class QuestionsSeeder extends Seeder
         ]);
 
         \App\Question::create([
-            'question_id' => $easyCategory->id,
+            'question_group_id' => $easyCategory->id,
             'question' => "Wanneer is de koning jarig?",
             'answer_1' => "28 April",
             'answer_2' => '27 Juni',
@@ -45,7 +45,7 @@ class QuestionsSeeder extends Seeder
         ]);
 
         \App\Question::create([
-            'question_id' => $easyCategory->id,
+            'question_group_id' => $easyCategory->id,
             'question' => "Uit hoeveel provincies bestaat Nederland?",
             'answer_1' => "10",
             'answer_2' => '5',
@@ -57,7 +57,7 @@ class QuestionsSeeder extends Seeder
         ]);
 
         \App\Question::create([
-            'question_id' => $hardCategory->id,
+            'question_group_id' => $hardCategory->id,
             'question' => "Wanneer was rotterdam getroffen door bombardementen?",
             'answer_1' => "14 mei 1943",
             'answer_2' => '14 mei 1940',
@@ -69,7 +69,7 @@ class QuestionsSeeder extends Seeder
         ]);
 
         \App\Question::create([
-            'question_id' => $hardCategory->id,
+            'question_group_id' => $hardCategory->id,
             'question' => "Wat zijn de 2 officiële talen van Nederland?",
             'answer_1' => "Nederlands en Engels",
             'answer_2' => 'Nederlands en Frans',
@@ -81,7 +81,7 @@ class QuestionsSeeder extends Seeder
         ]);
 
         \App\Question::create([
-            'question_id' => $hardCategory->id,
+            'question_group_id' => $hardCategory->id,
             'question' => "Wat is het laagste punt van Nederland?",
             'answer_1' => "Rotterdam",
             'answer_2' => 'Amsterdam',

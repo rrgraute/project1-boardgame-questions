@@ -29,7 +29,7 @@ class QuestionsSeeder extends Seeder
             'answer_4' => '1940 - 1945',
             'correct_answer' => 1,
             'correct_answer_condition' => "+5 punten",
-            'bad_answer_condition' => "-5 punten"
+            'bad_answer_condition' => ""
         ]);
 
         \App\Question::create([
@@ -41,7 +41,7 @@ class QuestionsSeeder extends Seeder
             'answer_4' => '30 April',
             'correct_answer' => 3,
             'correct_answer_condition' => "+5 punten",
-            'bad_answer_condition' => "-5 punten"
+            'bad_answer_condition' => ""
         ]);
 
         \App\Question::create([
@@ -53,8 +53,45 @@ class QuestionsSeeder extends Seeder
             'answer_4' => '12',
             'correct_answer' => 4,
             'correct_answer_condition' => "+5 punten",
-            'bad_answer_condition' => "-5 punten"
+            'bad_answer_condition' => ""
         ]);
+
+        \App\Question::create([
+            'question_id' => $hardCategory->id,
+            'question' => "Wanneer was rotterdam getroffen door bombardementen?",
+            'answer_1' => "14 mei 1943",
+            'answer_2' => '14 mei 1940',
+            'answer_3' => '13 mei 1940',
+            'answer_4' => '5 mei 1940',
+            'correct_answer' => 2,
+            'correct_answer_condition' => "+10 punten",
+            'bad_answer_condition' => ""
+        ]);
+
+        \App\Question::create([
+            'question_id' => $hardCategory->id,
+            'question' => "Wat zijn de 2 officiële talen van Nederland?",
+            'answer_1' => "Nederlands en Engels",
+            'answer_2' => 'Nederlands en Frans',
+            'answer_3' => 'Nederlands en Spaans',
+            'answer_4' => 'Nederlands en Fries ',
+            'correct_answer' => 4,
+            'correct_answer_condition' => "+10 punten",
+            'bad_answer_condition' => ""
+        ]);
+
+        \App\Question::create([
+            'question_id' => $hardCategory->id,
+            'question' => "Wat is het laagste punt van Nederland?",
+            'answer_1' => "Rotterdam",
+            'answer_2' => 'Amsterdam',
+            'answer_3' => 'Nieuwerkerk a/d IJssel',
+            'answer_4' => 'Groningen ',
+            'correct_answer' => 3,
+            'correct_answer_condition' => "+10 punten",
+            'bad_answer_condition' => ""
+        ]);
+
 
     }
 }
